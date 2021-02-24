@@ -32,7 +32,7 @@ public class TurnTracker
     public void InitTurnTracker(GameplayMatchPresets presets)
     {
         player1GamePiece = presets.P1Pieces;
-        _player2GamePiece = player1GamePiece == GameplayPieceTypes.O_Pieces ? GameplayPieceTypes.X_Pieces : GameplayPieceTypes.O_Pieces;
+        _player2GamePiece = presets.P2Pieces;
 
         player1Type = presets.P1Type;
         player2Type = presets.P2Type;

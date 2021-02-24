@@ -97,6 +97,7 @@ public class GameManager : Singleton<GameManager>
             // if so, end it
             _isGameOver = true;
             EndGame(false);
+            return;
 
         }
         //Check if a tie has been reached
@@ -104,6 +105,7 @@ public class GameManager : Singleton<GameManager>
         {
             _isGameOver = true;
             EndGame(true);
+            return;
         }
         else
         {
@@ -232,7 +234,7 @@ public class GameManager : Singleton<GameManager>
         score = 1;
         for (int i = 1; i < 3; i++)
         {
-            if (x + 1 < this._gameBoard.BoardWidth && y + i < this._gameBoard.BoardHeight)
+            if (x + i < this._gameBoard.BoardWidth && y + i < this._gameBoard.BoardHeight)
             {
                 if (this._gameBoard.GetSimplifiedGameBoard()[x + i, y + i] == gamePiece)
                 {

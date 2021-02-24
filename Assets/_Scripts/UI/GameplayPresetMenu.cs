@@ -37,13 +37,13 @@ public class GameplayPresetMenu : MonoBehaviour
     {
         p1AIDifficultySelection.SetActive(false);
         p2AIDifficultySelection.SetActive(false);
-        this._currentMatchPresets.P1Pieces = GameplayPieceTypes.O_Pieces;
-        this._currentMatchPresets.P2Pieces = GameplayPieceTypes.X_Pieces;
+        this._currentMatchPresets.P1Pieces = GameplayPieceTypes.X_Pieces;
+        this._currentMatchPresets.P2Pieces = GameplayPieceTypes.O_Pieces;
     }
 
     public void SelectP1Pieces()
     {
-        this._currentMatchPresets.P1Pieces = (GameplayPieceTypes)this.p1Pieces.value + 1;
+        this._currentMatchPresets.P1Pieces = (GameplayPieceTypes)this.p1Pieces.value;
         this.SelectP2Pieces();
     }
 
